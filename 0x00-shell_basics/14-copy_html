@@ -1,2 +1,3 @@
 #!/bin/bash
-cp -u *.htm ..
+SRC_DIR=$(pwd); DEST_DIR=$(dirname "$SRC_DIR"); find . -maxdepth 1 -name '*.html' -type f -exec sh -c 'cp -n -u "$0" "$1"' {} "$DEST_DIR" \;
+
